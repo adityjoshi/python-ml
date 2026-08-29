@@ -16,9 +16,12 @@ class ExpressDelivery(Delivery):
         return super().calculate_cost() * self.priority_multiplier
 
 
-if __name__ == "__main__":
+def main():
     d = ExpressDelivery(102,20,8,1.5)
     s = Delivery(101,10,5)
     ans = d.calculate_cost()
     print(ans)
     print(s.calculate_cost())
+
+if __name__ == "__main__":
+    main()
