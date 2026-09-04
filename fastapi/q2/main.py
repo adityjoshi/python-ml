@@ -73,7 +73,7 @@ def get_store(
         item_q = item_q.filter(models.Item.category == category)
     if sort == "name":
         item_q = item_q.order_by(models.Item.name.asc())
-    elif sort == "stock_qty":
+    if sort == "stock_qty":
         item_q = item_q.order_by(models.Item.stock_qty.asc())
 
     items = item_q.all()

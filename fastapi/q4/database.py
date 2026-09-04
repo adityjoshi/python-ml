@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 
-DATABASE_URL = ("http:///./parkwise.db")
+DATABASE_URL = ("sqlite:///./parkwise.db")
 
 engine = create_engine(
     DATABASE_URL,
@@ -10,7 +10,6 @@ engine = create_engine(
 
 )
 
-Base = declarative_base()
 
 SessionLocal = sessionmaker(
     autocommit=False,
@@ -18,6 +17,7 @@ SessionLocal = sessionmaker(
     bind=engine
 )
 
+Base = declarative_base()
 
 def get_db():
     db = SessionLocal()
