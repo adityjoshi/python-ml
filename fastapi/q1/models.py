@@ -12,7 +12,7 @@ class Depot(Base):
     region = Column(String)
 
     vehicles = relationship(
-        "Vehicle", back_populates="depots", cascade="all, delete-orphan")
+        "Vehicle", back_populates="depot", cascade="all, delete-orphan")
 
 
 class Vehicle(Base):

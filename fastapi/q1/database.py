@@ -7,7 +7,7 @@ DATABASE_URL = "sqlite:///./fleettrack.db"
 
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_threads": False}
+    connect_args={"check_same_thread": False}
 
 )
 
@@ -21,7 +21,7 @@ Base = declarative_base()
 
 
 def get_db():
-    db = SessionLocal
+    db = SessionLocal()
     try:
         yield db
 
