@@ -2,20 +2,21 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 
-DATABASE_URL = "http:///./greencart.db"
+DATABASE_URL = "sqlite:///./greencart.db"
 
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread"=True}
+    connect_args={"check_same_thread": False},
 )
 
 SessionLocal = sessionmaker(
     autocommit=False,
-    autoFlush=True,
-    bind=engine
+    autoflush=True,
+    bind=engine,
 )
 
 Base = declarative_base()
+
 
 def get_db():
     db = SessionLocal()
@@ -23,4 +24,3 @@ def get_db():
         yield db
     finally:
         db.close()
-

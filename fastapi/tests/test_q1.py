@@ -8,6 +8,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 
 Q1_DIR = Path(__file__).resolve().parents[1] / "q1"
+for mod in ("database", "models", "schemas", "main"):
+    sys.modules.pop(mod, None)
 sys.path.insert(0, str(Q1_DIR))
 
 from database import Base, get_db  # noqa: E402
