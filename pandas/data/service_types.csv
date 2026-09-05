@@ -1,0 +1,9 @@
+service_id,service_name,specialty
+1,General Checkup,General Medicine
+2,Dental Cleaning,Dentistry
+3,Eye Exam,Ophthalmology
+4,Physiotherapy Session,Physiotherapy
+5,Blood Test Panel,Pathology
+6,Cardiology Consult,Cardiology
+7,Dermatology Consult,Dermatology
+8,Pediatric Checkup,Pediatrics
