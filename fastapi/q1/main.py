@@ -14,7 +14,7 @@ from schemas import (
     VehicleOut,
 )
 
-Base.metadata.create_all(bind=engine)
+Base.metadata.(bind=engine)
 
 
 app = FastAPI()

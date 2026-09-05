@@ -1,0 +1,15 @@
+item_id,item_name,category
+101,Espresso,Beverage
+102,Latte,Beverage
+103,Cappuccino,Beverage
+104,Green Tea,Beverage
+201,Croissant,Bakery
+202,Blueberry Muffin,Bakery
+203,Sourdough Loaf,Bakery
+204,Bagel,Bakery
+301,Potato Chips,Snack
+302,Trail Mix,Snack
+303,Granola Bar,Snack
+401,Chocolate Cake,Dessert
+402,Cheesecake Slice,Dessert
+403,Ice Cream Cup,Dessert
