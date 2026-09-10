@@ -11,7 +11,7 @@ def remove_invalid_orders(df):
     df = df.drop_duplicates(subset=["order_id"], keep="first")
     df = df.dropna(subset=["quantity"])
     df = df[df["quantity"] > 0]
-    return df
+    return df.reset_index(drop=True)
 
 
 def attach_item_details(df, ref_file_path):
@@ -27,13 +27,12 @@ def add_order_value_column(df):
 
 def summarize_by_category(df):
     summary = (
-        df.groupby("category")
+        df.groupby(["category"])
         .agg({"order_value": "sum", "quantity": "mean", "order_id": "count"})
         .reset_index()
     )
     summary["quantity"] = summary["quantity"].round(2)
-    return summary.reset_index(drop=True)
-
+    return summary
 
 def format_summary(df):
     df = df.rename(

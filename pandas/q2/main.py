@@ -22,7 +22,7 @@ def attach_service_details(df, service_ref):
 def attach_clinic_details(df, clinic_ref):
     df = df.merge(clinic_ref, on="clinic_id", how="inner")
     df = df.drop(columns=["clinic_id"])
-    return df
+    return df['', '', '', '']
 
 
 def add_total_bill(df):

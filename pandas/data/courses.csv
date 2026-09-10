@@ -1,0 +1,14 @@
+course_id,course_name,track
+101,Python for Analytics,DataScience
+102,Machine Learning Basics,DataScience
+103,SQL Mastery,DataScience
+201,React Fundamentals,WebDev
+202,Node.js Backend,WebDev
+203,Full Stack Capstone,WebDev
+301,AWS Cloud Practitioner,Cloud
+302,Docker & Kubernetes,Cloud
+303,Terraform Essentials,Cloud
+304,Cloud Security,Cloud
+401,UI Design Principles,Design
+402,Figma for Teams,Design
+403,Design Systems,Design
